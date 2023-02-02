@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
                         val differenceInMins = currentDateInMins - selectedDateInMins
 
-                        tvAgeInMins?.text = differenceInMins.toString()
+                        tvAgeInMins?.text = NumberFormat.getInstance().format(differenceInMins)
                     }
 
                 }
